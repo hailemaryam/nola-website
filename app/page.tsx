@@ -85,8 +85,8 @@ export default function Home() {
           <div className="about-content">
             <div className="about-text">
               <h3>Rooted in Nature</h3>
-              <p>At Nola, we believe that the best dairy comes from the happiest cows. For over three decades, we have been committed to sustainable farming, natural processes, and delivering the highest quality dairy straight from our green pastures to your table.</p>
-              <p>Every bottle of milk, every block of cheese, and every scoop of butter is a testament to our dedication to purity and freshness. We bring the rich goodness of nature directly to your family&apos;s daily meals.</p>
+              <p>At Nola Dairy, we believe great dairy begins with healthy cows and natural farming. For years, we have focused on sustainable practices, fresh ingredients, and producing high-quality dairy products our customers can trust.</p>
+              <p>From fresh milk to yohgurt, every product is made with care and dedication. Our goal is simple — to bring pure, natural dairy goodness from our farms straight to your table every day. 🥛🌿</p>
             </div>
             <div className="about-image-wrapper">
               <Image 
@@ -213,41 +213,22 @@ export default function Home() {
 
       <section className="contact section" id="contact">
         <div className="container">
-          <div className="contact-wrapper">
-            <div className="contact-info">
-              <h2>Get in Touch</h2>
-              <p>We&apos;d love to hear from you. Reach out to us for any inquiries about our high-quality dairy products or partnerships.</p>
-              <div className="info-list">
-                <div className="info-item">
-                  <span className="icon">📍</span>
-                  <p>Addis Ababa, Ethiopia</p>
-                </div>
-                <div className="info-item">
-                  <span className="icon">📞</span>
-                  <p>+251940898910</p>
-                </div>
-                <div className="info-item">
-                  <span className="icon">✉️</span>
-                  <p>Noladairyinfo@gmail</p>
-                </div>
+          <div className="contact-info" style={{ borderRadius: 'var(--radius)', textAlign: 'center', padding: '5rem 3rem' }}>
+            <h2>Get in Touch</h2>
+            <p style={{ maxWidth: '600px', margin: '0 auto 3rem', color: 'var(--white)' }}>We&apos;d love to hear from you. Reach out to us for any inquiries about our high-quality dairy products or partnerships.</p>
+            <div className="info-list" style={{ display: 'flex', justifyContent: 'center', gap: '3rem', flexWrap: 'wrap' }}>
+              <div className="info-item" style={{ flexDirection: 'column', gap: '1rem', width: '200px' }}>
+                <span className="icon" style={{ margin: '0 auto' }}>📍</span>
+                <p style={{ textAlign: 'center' }}>Addis Ababa, Ethiopia</p>
               </div>
-            </div>
-            <div className="contact-form">
-              <form onSubmit={(e) => e.preventDefault()}>
-                <div className="form-group">
-                  <label htmlFor="name">Name</label>
-                  <input type="text" id="name" placeholder="Your Full Name" required />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="email">Email</label>
-                  <input type="email" id="email" placeholder="Your Email Address" required />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="message">Message</label>
-                  <textarea id="message" rows={5} placeholder="How can we help you?" required></textarea>
-                </div>
-                <button type="submit" className="btn btn-primary w-100">Send Message</button>
-              </form>
+              <div className="info-item" style={{ flexDirection: 'column', gap: '1rem', width: '200px' }}>
+                <span className="icon" style={{ margin: '0 auto' }}>📞</span>
+                <p style={{ textAlign: 'center' }}>+251940898910</p>
+              </div>
+              <div className="info-item" style={{ flexDirection: 'column', gap: '1rem', width: '200px' }}>
+                <span className="icon" style={{ margin: '0 auto' }}>✉️</span>
+                <p style={{ textAlign: 'center' }}>Noladairyinfo@gmail</p>
+              </div>
             </div>
           </div>
         </div>
@@ -262,6 +243,9 @@ export default function Home() {
             <Image src="/transparent logo.png" alt="Nola Logo" width={280} height={100} style={{ height: "90px", width: "auto" }} />
           </div>
           <p className="copyright">&copy; 2026 Nola Dairy Company. All rights reserved.</p>
+          <p className="powered-by" style={{ marginTop: '0.5rem', fontSize: '0.9rem', color: 'rgba(255,255,255,0.7)' }}>
+            Powered by <a href="https://www.akirdigitalsolutions.com/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: 'var(--white)' }}>Akir Digital Solutions</a>
+          </p>
         </div>
       </footer>
     </>
