@@ -375,14 +375,17 @@ p.subtitle {
   overflow: hidden;
 }
 
-.products-banner img {
+.products-banner img,
+.products-banner video {
   height: 450px;
+  width: 100%;
   object-fit: cover;
   transform: scale(1);
   transition: 0.8s ease;
 }
 
-.products-banner:hover img {
+.products-banner:hover img,
+.products-banner:hover video {
   transform: scale(1.03);
 }
 
@@ -578,20 +581,43 @@ p.subtitle {
 
 /* Footer */
 .footer {
+  position: relative;
   background-color: var(--primary-dark);
   color: var(--white);
-  padding: 4rem 0 2rem;
+  padding: 6rem 0 3rem;
+  overflow: hidden;
 }
 
-.footer-logo {
-  color: var(--white);
-  margin-bottom: 1rem;
-  font-size: 2.5rem;
+.footer-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  opacity: 0.15; /* Decreased opacity of the image so the green background shows through vividly */
 }
 
-.footer p {
+.footer-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-logo-container {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.copyright {
   margin: 0;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.05rem;
+  text-align: center;
 }
 
 /* Responsive */

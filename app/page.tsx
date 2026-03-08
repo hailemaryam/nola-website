@@ -35,7 +35,9 @@ export default function Home() {
     <>
       <header className={`navbar ${isScrolled ? "scrolled" : ""}`}>
         <div className="container">
-          <a href="#" className="logo">Nola</a>
+          <a href="#" className="logo" style={{ display: 'flex', alignItems: 'center' }}>
+            <Image src="/transparent logo.png" alt="Nola Logo" width={250} height={85} style={{ height: "80px", width: "auto" }} />
+          </a>
           <nav>
             <ul className={`nav-links ${isMenuOpen ? "active" : ""}`}>
               <li><a href="#about" onClick={(e) => handleNavClick(e, "#about")}>About Nola</a></li>
@@ -65,7 +67,7 @@ export default function Home() {
           </div>
           <div className="hero-image-wrapper">
              <Image 
-                src="/images/hero_milk_pouring_1772969797202.png" 
+                src="/hero3.png" 
                 alt="Fresh milk pouring into glass on a beautiful green farm" 
                 width={800} height={650}
                 className="hero-image"
@@ -88,7 +90,7 @@ export default function Home() {
             </div>
             <div className="about-image-wrapper">
               <Image 
-                src="/images/farm_cows_1772970009501.png" 
+                src="/hero1.png" 
                 alt="Peaceful cows grazing on a lush green pasture" 
                 width={800} height={550}
                 className="rounded-img shadow"
@@ -131,10 +133,12 @@ export default function Home() {
             </div>
           </div>
           <div className="products-banner mt-4">
-             <Image 
-                src="/images/dairy_products_1772969902868.png" 
-                alt="Premium Nola Dairy Products array" 
-                width={1200} height={450}
+             <video 
+                src="/grok-video-b5b0e517-e834-46dd-b89f-7d7efb90eb3a.mp4" 
+                autoPlay 
+                loop 
+                muted 
+                playsInline
                 className="rounded-img shadow full-width-img"
              />
           </div>
@@ -216,15 +220,15 @@ export default function Home() {
               <div className="info-list">
                 <div className="info-item">
                   <span className="icon">📍</span>
-                  <p>123 Green Pasture Lane, Nola Valley</p>
+                  <p>Addis Ababa, Ethiopia</p>
                 </div>
                 <div className="info-item">
                   <span className="icon">📞</span>
-                  <p>1-800-NOLA-COW</p>
+                  <p>+251940898910</p>
                 </div>
                 <div className="info-item">
                   <span className="icon">✉️</span>
-                  <p>hello@noladairy.com</p>
+                  <p>Noladairyinfo@gmail</p>
                 </div>
               </div>
             </div>
@@ -250,9 +254,14 @@ export default function Home() {
       </section>
 
       <footer className="footer">
-        <div className="container text-center">
-          <h2 className="footer-logo">Nola</h2>
-          <p>&copy; 2026 Nola Dairy Company. All rights reserved.</p>
+        <div className="footer-background">
+          <Image src="/footerbg.jpg" alt="Footer Background" fill style={{ objectFit: 'cover' }} quality={100} />
+        </div>
+        <div className="container footer-content-wrapper">
+          <div className="footer-logo-container">
+            <Image src="/transparent logo.png" alt="Nola Logo" width={280} height={100} style={{ height: "90px", width: "auto" }} />
+          </div>
+          <p className="copyright">&copy; 2026 Nola Dairy Company. All rights reserved.</p>
         </div>
       </footer>
     </>
