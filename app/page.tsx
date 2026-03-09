@@ -44,7 +44,7 @@ export default function Home() {
               <li><a href="#products" onClick={(e) => handleNavClick(e, "#products")}>Our Products</a></li>
               <li><a href="#why-us" onClick={(e) => handleNavClick(e, "#why-us")}>Why Choose Us</a></li>
               <li><a href="#process" onClick={(e) => handleNavClick(e, "#process")}>Process</a></li>
-              <li><a href="#contact" className="btn btn-outline" onClick={(e) => handleNavClick(e, "#contact")}>Contact</a></li>
+              <li><a href="#contact" className="btn btn-primary" onClick={(e) => handleNavClick(e, "#contact")}>Order Now</a></li>
             </ul>
           </nav>
           <div
@@ -130,9 +130,6 @@ export default function Home() {
                 <h3>Artisanal Cheese</h3>
                 <p>Aged nicely with deep, natural flavors perfect for any pairing.</p>
               </div>
-            </div>
-            <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-              <a href="#order" className="btn btn-primary" onClick={(e) => handleNavClick(e, "#order")} style={{ padding: '16px 40px', fontSize: '1.2rem' }}>Order Now</a>
             </div>
           </div>
           <div className="products-banner mt-4">
@@ -225,12 +222,51 @@ export default function Home() {
                 <p style={{ textAlign: 'center' }}>Addis Ababa, Ethiopia</p>
               </div>
               <div className="info-item" style={{ flexDirection: 'column', gap: '1rem', width: '200px' }}>
-                <span className="icon" style={{ margin: '0 auto' }}>📞</span>
-                <p style={{ textAlign: 'center' }}>+251940898910</p>
+                <a href="tel:+251940898910" style={{ display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center', textDecoration: 'none', color: 'inherit' }}>
+                  <span className="icon" style={{ margin: '0 auto' }}>📞</span>
+                  <p style={{ textAlign: 'center' }}>+251940898910</p>
+                </a>
               </div>
               <div className="info-item" style={{ flexDirection: 'column', gap: '1rem', width: '200px' }}>
-                <span className="icon" style={{ margin: '0 auto' }}>✉️</span>
-                <p style={{ textAlign: 'center' }}>Noladairyinfo@gmail</p>
+                <a href="mailto:Noladairyinfo@gmail.com" style={{ display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center', textDecoration: 'none', color: 'inherit' }}>
+                  <span className="icon" style={{ margin: '0 auto' }}>✉️</span>
+                  <p style={{ textAlign: 'center' }}>Noladairyinfo@gmail</p>
+                </a>
+              </div>
+            </div>
+            <div className="info-list" style={{ display: 'flex', justifyContent: 'center', gap: '3rem', flexWrap: 'wrap', marginTop: '2.5rem' }}>
+              <div className="info-item" style={{ flexDirection: 'column', gap: '1rem', width: '200px' }}>
+                <a href="https://t.me/noladairy" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center', textDecoration: 'none', color: 'inherit' }}>
+                  <span className="icon" style={{ margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M22 2L11 13"></path>
+                      <path d="M22 2L15 22L11 13L2 9L22 2z"></path>
+                    </svg>
+                  </span>
+                  <p style={{ textAlign: 'center' }}>@noladairy</p>
+                </a>
+              </div>
+              <div className="info-item" style={{ flexDirection: 'column', gap: '1rem', width: '200px' }}>
+                <a href="https://instagram.com/noladairy" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center', textDecoration: 'none', color: 'inherit' }}>
+                  <span className="icon" style={{ margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                  </span>
+                  <p style={{ textAlign: 'center' }}>@noladairy</p>
+                </a>
+              </div>
+              <div className="info-item" style={{ flexDirection: 'column', gap: '1rem', width: '200px' }}>
+                <a href="https://tiktok.com/@noladairy" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center', textDecoration: 'none', color: 'inherit' }}>
+                  <span className="icon" style={{ margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.01.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93v7.02c0 1.25-.32 2.51-.95 3.59-1.16 1.98-3.4 3.06-5.7 2.89-2.22-.16-4.24-1.47-5.32-3.41-1.07-1.92-1.07-4.33-.04-6.24 1.26-2.3 3.8-3.58 6.38-3.26v4.06c-1.14-.14-2.3.44-2.87 1.43-.51.89-.48 2.05.07 2.92.57.88 1.67 1.34 2.7 1.14 1.25-.23 2.1-1.4 2.14-2.66V.02h-.49z"/>
+                    </svg>
+                  </span>
+                  <p style={{ textAlign: 'center' }}>@noladairy</p>
+                </a>
               </div>
             </div>
           </div>
