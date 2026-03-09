@@ -24,7 +24,7 @@ export default function Home() {
     e.preventDefault();
     setIsMenuOpen(false);
     if (targetId === "#") return;
-    
+
     const targetElement = document.querySelector(targetId);
     if (targetElement) {
       targetElement.scrollIntoView({ behavior: "smooth" });
@@ -47,8 +47,8 @@ export default function Home() {
               <li><a href="#contact" className="btn btn-outline" onClick={(e) => handleNavClick(e, "#contact")}>Contact</a></li>
             </ul>
           </nav>
-          <div 
-            className={`mobile-menu-btn ${isMenuOpen ? "active" : ""}`} 
+          <div
+            className={`mobile-menu-btn ${isMenuOpen ? "active" : ""}`}
             onClick={toggleMenu}
           >
             <span></span><span></span><span></span>
@@ -61,17 +61,18 @@ export default function Home() {
           <div className="hero-content">
             <h1>Pure Dairy Goodness from Nature.</h1>
             <p>Experience the fresh, rich taste of farm-fresh dairy. Made with love and commitment to quality.</p>
-            <div className="hero-actions">
-              <a href="#products" className="btn btn-primary" onClick={(e) => handleNavClick(e, "#products")}>Explore Our Products</a>
+            <div className="hero-actions" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+              <a href="#order" className="btn btn-primary" onClick={(e) => handleNavClick(e, "#order")}>Order Now</a>
+              <a href="#products" className="btn btn-outline" onClick={(e) => handleNavClick(e, "#products")} style={{ backgroundColor: 'transparent' }}>Explore Our Products</a>
             </div>
           </div>
           <div className="hero-image-wrapper">
-             <Image 
-                src="/hero3.png" 
-                alt="Fresh milk pouring into glass on a beautiful green farm" 
-                width={800} height={650}
-                className="hero-image"
-             />
+            <Image
+              src="/hero3.png"
+              alt="Fresh milk pouring into glass on a beautiful green farm"
+              width={800} height={650}
+              className="hero-image"
+            />
           </div>
         </div>
       </section>
@@ -89,9 +90,9 @@ export default function Home() {
               <p>From fresh milk to yohgurt, every product is made with care and dedication. Our goal is simple — to bring pure, natural dairy goodness from our farms straight to your table every day. 🥛🌿</p>
             </div>
             <div className="about-image-wrapper">
-              <Image 
-                src="/hero1.png" 
-                alt="Peaceful cows grazing on a lush green pasture" 
+              <Image
+                src="/hero1.png"
+                alt="Peaceful cows grazing on a lush green pasture"
                 width={800} height={550}
                 className="rounded-img shadow"
               />
@@ -107,7 +108,7 @@ export default function Home() {
             <div className="line mx-auto"></div>
             <p className="subtitle">Pure, fresh, and nutritious dairy crafted for you.</p>
           </div>
-            
+
           <div className="product-showcase">
             <div className="product-cards">
               <div className="product-card">
@@ -131,16 +132,19 @@ export default function Home() {
                 <p>Aged nicely with deep, natural flavors perfect for any pairing.</p>
               </div>
             </div>
+            <div style={{ textAlign: 'center', marginTop: '3rem' }}>
+              <a href="#order" className="btn btn-primary" onClick={(e) => handleNavClick(e, "#order")} style={{ padding: '16px 40px', fontSize: '1.2rem' }}>Order Now</a>
+            </div>
           </div>
           <div className="products-banner mt-4">
-             <video 
-                src="/grok-video-b5b0e517-e834-46dd-b89f-7d7efb90eb3a.mp4" 
-                autoPlay 
-                loop 
-                muted 
-                playsInline
-                className="rounded-img shadow full-width-img"
-             />
+            <video
+              src="/grok-video-b5b0e517-e834-46dd-b89f-7d7efb90eb3a.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="rounded-img shadow full-width-img"
+            />
           </div>
         </div>
       </section>
