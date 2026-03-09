@@ -61,9 +61,8 @@ export default function Home() {
           <div className="hero-content">
             <h1>Pure Dairy Goodness from Nature.</h1>
             <p>Experience the fresh, rich taste of farm-fresh dairy. Made with love and commitment to quality.</p>
-            <div className="hero-actions" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-              <a href="#order" className="btn btn-primary" onClick={(e) => handleNavClick(e, "#order")}>Order Now</a>
-              <a href="#products" className="btn btn-outline" onClick={(e) => handleNavClick(e, "#products")} style={{ backgroundColor: 'transparent' }}>Explore Our Products</a>
+            <div className="hero-actions">
+              <a href="#products" className="btn btn-primary" onClick={(e) => handleNavClick(e, "#products")}>Explore Our Products</a>
             </div>
           </div>
           <div className="hero-image-wrapper">
